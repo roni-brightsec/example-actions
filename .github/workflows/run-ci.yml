@@ -39,7 +39,6 @@ jobs:
         id: start
         run: |
           SCAN_ID=$(nexploit-cli scan:run                                                 \
-            --test  angular_csti backup_locations broken_saml_auth brute_force_login common_files cookie_security csrf default_login_location directory_listing dom_xss email_injection exposed_couch_db_apis file_upload full_path_disclosure graphql_introspection header_security hrs html_injection http_method_fuzzing http_response_splitting improper_asset_management insecure_tls_configuration jwt ldapi lfi lrrl nosql open_buckets open_database osi proto_pollution rfi secret_tokens server_side_js_injection sqli ssrf ssti unvalidated_redirect version_control_systems wordpress xpathi xss xxe                 \
             --name "💎 BrokenCrystals for a '${GITHUB_REF##*/}' branch #${GITHUB_RUN_NUMBER}" \
             --crawler https://brokencrystals.com/api/config https://brokencrystals.com/  \
             --repeater ${{ secrets.REPEATER }}                                            \

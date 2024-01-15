@@ -15,7 +15,7 @@ on:
 jobs:
   start_and_wait_scan:
     runs-on: ubuntu-20.04
-    name: A job to run a Nexploit scan
+    name: A job to run a Bright Security scan
     steps:
       - uses: actions/checkout@v3.5.2
       - run: |
@@ -35,7 +35,7 @@ jobs:
           sudo docker-compose config
       - run: sleep 30s
       - run: sudo docker-compose logs
-      - name: Start Nexploit Scan 🏁
+      - name: Start Bright Security Scan 🏁
         id: start
         run: |
           SCAN_ID=$(nexploit-cli scan:run                                                 \

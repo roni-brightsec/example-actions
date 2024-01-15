@@ -51,7 +51,6 @@ jobs:
         run: |
           nexploit-cli scan:polling               \
             --interval 30s                        \
-            --timeout 90m                         \
             --token ${{ secrets.NEXPLOIT_TOKEN }} \
             --breakpoint high_issue $SCAN_ID
       - name: Stop Scan 🛑
